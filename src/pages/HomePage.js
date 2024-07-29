@@ -1,7 +1,7 @@
-// src/pages/HomePage.js
 import React from 'react';
 import styled from 'styled-components';
 import Button from '../styles/Button';
+import ButtonGroup from '../styles/ButtonGroup';
 import storyMobileImage from '../images/storymobile.png';
 
 const HomePageWrapper = styled.div`
@@ -17,7 +17,7 @@ const ContentWrapper = styled.div`
 `;
 
 const TextSection = styled.div`
-  width: 45%;
+  width: 50%;
   text-align: left;
 `;
 
@@ -29,12 +29,6 @@ const ImageSection = styled.div`
   }
 `;
 
-const ButtonGroup = styled.div`
-  display: flex;
-  gap: 10px;
-  margin-top: 10px;
-`;
-
 const HomePage = () => {
   return (
     <HomePageWrapper>
@@ -44,8 +38,8 @@ const HomePage = () => {
           <h2>New Story</h2>
           <p>Combining storytelling and visual aids to enhance your storytelling skills. Strive for excellence.</p>
           <ButtonGroup>
-            <Button>Join Now</Button>
-            <Button>Log In</Button>
+            <Button to="/register">Join Now</Button>
+            <Button to="/login">Log In</Button>
           </ButtonGroup>
         </TextSection>
         <TextSection>
